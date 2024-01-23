@@ -8,15 +8,20 @@ cd acw_sc__v2
 npm install
 ```
 
-## Usage
+## Cli Usage
 
 1. Put the HTML content into `assets/index.html`
-2. Run `node main.js`
+2. Run `node cli.js`
 
 ```bash
-$ node main.js
+$ node cli.js
 acw_sc__v2=65afac17e880921014c4ead657413970d8b23ccb
 ```
+
+## Web Usage
+
+1. Run `node app.js`
+2. Open `http://localhost:3000/`
 
 ## Acknowledgement
 
