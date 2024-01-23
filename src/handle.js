@@ -222,20 +222,33 @@ function generate(id, key, shuffles) {
   return hexor(key, unbox(id, shuffles));
 }
 
-function main() {
-  let code = extractJavaScript(fs.readFileSync("assets/index.html", "utf8"));
+function handle(html) {
+  let code = extractJavaScript(html);
   let ciphers = extract_ciphers(code);
+  console.log(ciphers);
   let num_shifts = get_num_shifts(code);
+  console.log(num_shifts);
   while (num_shifts > 0) {
     ciphers.push(ciphers.shift());
     num_shifts--;
   }
+  console.log(ciphers);
   let keys = extract_keys(code);
+  console.log(keys);
   let key = rc4(convert_cipher(ciphers[3]), keys[3]);
+  console.log(key);
   let shuffles = extract_shuffles(code);
+  console.log(shuffles);
   let origin_id = extract_id(code);
+  console.log(origin_id);
   let plain = generate(origin_id, key, shuffles);
-  console.log("acw_sc__v2=" + plain);
+  console.log(plain);
+  return plain
 }
 
-main();
+function main() {
+  console.log("acw_sc__v2=" + handle(fs.readFileSync("assets/index.html", "utf8")));
+}
+
+exports.handle = handle;
+exports.main = main;
