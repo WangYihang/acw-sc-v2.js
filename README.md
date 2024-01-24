@@ -1,6 +1,6 @@
 # acw-sc-v2
 
-Input `html` file, output `acw_sc__v2` cookie.
+Input `html` file, output `acw_sc__v2` cookie. Try it [online](https://acw-sc-v2.vercel.app/).
 
 The `html` file looks like this:
 
@@ -23,10 +23,13 @@ npm install
 
 ## API Usage
 
+1. Start API server: `node scripts/server.js`
+2. Send `POST` request to `http://localhost:3000/`.
+
 ```python
 import requests
 with open("index.html") as f:
-    response = requests.post('https://acw-sc-v2.authu.online/', data={'data': f.read()})
+    response = requests.post('http://localhost:3000/', data={'data': f.read()})
     print(response.text)
 ```
 
