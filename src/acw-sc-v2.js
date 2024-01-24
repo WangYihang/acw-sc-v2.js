@@ -106,7 +106,7 @@ function extract_keys(code) {
             .map((token) => token.value)
             .join("");
         });
-        index = parseInt(args[0]);
+        let index = parseInt(args[0]);
         keys[index] = args[1];
       }
     },
