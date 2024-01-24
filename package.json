@@ -2,9 +2,8 @@
   "name": "acw-sc-v2",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon scripts/server.js"
   },
   "repository": {
     "type": "git",
