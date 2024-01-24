@@ -6,10 +6,10 @@ const fs = require("fs");
 function extractJavaScript(html) {
   const dom = new jsdom.JSDOM(html);
   const scripts = dom.window.document.querySelectorAll("script");
-  if (scripts.length === 1) {
-    return scripts[0].textContent;
+  if (scripts.length !== 1) {
+    throw new Error("invalid number of script tags");
   }
-  return null;
+  return scripts[0].textContent;
 }
 
 function extract_id(code) {
@@ -222,8 +222,9 @@ function generate(id, key, shuffles) {
   return hexor(key, unbox(id, shuffles));
 }
 
-function handle(html) {
+function acw_sc__v2(html) {
   let code = extractJavaScript(html);
+  console.log(code);
   let ciphers = extract_ciphers(code);
   console.log(ciphers);
   let num_shifts = get_num_shifts(code);
@@ -247,8 +248,8 @@ function handle(html) {
 }
 
 function main() {
-  console.log("acw_sc__v2=" + handle(fs.readFileSync("assets/index.html", "utf8")));
+  console.log("acw_sc__v2=" + acw_sc__v2(fs.readFileSync("assets/index.html", "utf8")));
 }
 
-exports.handle = handle;
+exports.acw_sc__v2 = acw_sc__v2;
 exports.main = main;
