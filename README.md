@@ -1,6 +1,8 @@
 # acw-sc-v2
 
-Input `html` file, output `acw_sc__v2` cookie. Try it [online](https://acw-sc-v2.vercel.app/).
+Input `html` file, output `acw_sc__v2` cookie. 
+
+> For online demo, check [https://acw-sc-v2.vercel.app/](https://acw-sc-v2.vercel.app/).
 
 The `html` file looks like this:
 
