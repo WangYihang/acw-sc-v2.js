@@ -25,6 +25,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@parcel/compressor-brotli": "^2.11.0",
+    "@parcel/compressor-gzip": "^2.11.0",
     "assert": "^2.0.0",
     "browserify-zlib": "^0.2.0",
     "buffer": "^5.5.0||^6.0.0",
