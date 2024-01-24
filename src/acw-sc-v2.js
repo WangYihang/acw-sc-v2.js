@@ -73,7 +73,7 @@ function get_num_shifts(code) {
           callee.type === "ArrowFunctionExpression"
         ) {
           found = true;
-          args = node.arguments.map((arg) => {
+          let args = node.arguments.map((arg) => {
             if (arg.type === "Literal") {
               return arg.value;
             }
@@ -97,7 +97,7 @@ function extract_keys(code) {
         node.callee &&
         node.callee.name === "_0x55f3"
       ) {
-        args = node.arguments.map((arg) => {
+        let args = node.arguments.map((arg) => {
           if (arg.type === "Literal") {
             return arg.value;
           }
