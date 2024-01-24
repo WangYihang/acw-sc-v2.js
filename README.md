@@ -8,10 +8,19 @@ cd acw-sc-v2
 npm install
 ```
 
+## API Usage
+
+```python
+import requests
+with open("index.html") as f:
+    response = requests.post('https://acw-sc-v2.authu.online/', data={'data': f.read()})
+    print(response.text)
+```
+
 ## Cli Usage
 
 1. Put the HTML content into `assets/index.html`
-2. Run `node cli.js`
+2. Run `node scripts/cli.js`
 
 ```bash
 $ node cli.js
@@ -27,7 +36,7 @@ acw_sc__v2=65afac17e880921014c4ead657413970d8b23ccb
 
 ### Manually
 
-1. Run `node app.js`
+1. Run `node scripts/server.js`
 2. Open `http://localhost:3000/`
 
 
