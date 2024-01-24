@@ -1,5 +1,18 @@
 # acw-sc-v2
 
+Input `html` file, output `acw_sc__v2` cookie.
+
+The `html` file looks like this:
+
+```html
+<html><script>
+var arg1='70D9569CD5E5895C84F284A09503B1598C5762A1';
+var _0x4818=['\x63\x73\x4b\x48\x77\x71\x4d\x49,...
+function setCookie(name,value){var expiredate=new Date();...
+function reload(x) {setCookie("acw_sc__v2", x);...
+</script></html>
+```
+
 ## Install
 
 ```bash
