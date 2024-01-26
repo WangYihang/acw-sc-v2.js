@@ -20,12 +20,12 @@ function reload(x) {setCookie("acw_sc__v2", x);...
 ```bash
 git clone https://github.com/WangYihang/acw-sc-v2
 cd acw-sc-v2
-npm install
+yarn install
 ```
 
 ## API Usage
 
-1. Start API server: `node scripts/server.js`
+1. Start API server: `node app.js`
 2. Send `POST` request to `http://localhost:3000/`.
 
 ```python
@@ -38,7 +38,7 @@ with open("index.html") as f:
 ## Cli Usage
 
 1. Put the HTML content into `assets/index.html`
-2. Run `node scripts/cli.js`
+2. Run `node cli.js`
 
 ```bash
 $ node cli.js
@@ -54,7 +54,7 @@ acw_sc__v2=65afac17e880921014c4ead657413970d8b23ccb
 
 ### Manually
 
-1. Run `node scripts/server.js`
+1. Run `node app.js`
 2. Open `http://localhost:3000/`
 
 

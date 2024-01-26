@@ -11,11 +11,7 @@ function setup() {
 
 function generate() {
   let data = textarea.value === "" ? textarea.placeholder : textarea.value;
-  if (data === "") {
-    alert("Please enter data!");
-  } else {
-    alert("acw_sc__v2="+acw_sc__v2.acw_sc__v2(data));
-  }
+  alert("acw_sc__v2="+acw_sc__v2.acw_sc__v2(data));
 }
 
 setup();

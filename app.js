@@ -1,27 +1,27 @@
-const acw_sc__v2 = require("../src/acw-sc-v2.js");
+const acw_sc__v2 = require("./src/acw-sc-v2.js");
 const express = require("express");
-const morgan = require('morgan')
+const morgan = require("morgan");
+const path = require("path");
 
 const app = express();
 const port = 3000;
 
-app.use(morgan('combined'))
+app.use(morgan("combined"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/src/index.html");
-});
-
-app.post("/", (req, res) => {
+function handle(req, res) {
   try {
-    console.log(req.body.data)
+    console.log(req.body.data);
     cookie = acw_sc__v2.acw_sc__v2(req.body.data);
-    res.send("acw_sc__v2="+cookie);
+    res.send(cookie);
   } catch (error) {
     console.error(error);
     res.send(error.toString());
   }
-});
+}
+
+app.use("/", express.static(path.join(__dirname, "dist")));
+app.post("/", handle);
 
 app.listen(port, () => {});
