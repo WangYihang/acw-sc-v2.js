@@ -6,10 +6,16 @@ const fs = require("fs");
 function extractJavaScript(html) {
   const dom = new jsdom.JSDOM(html);
   const scripts = dom.window.document.querySelectorAll("script");
-  if (scripts.length !== 1) {
-    throw new Error("invalid number of script tags");
+  let code = "";
+  for (let i = 0; i < scripts.length; i++) {
+    const script = scripts[i];
+    if (script.src) {
+      continue;
+    }
+    code += "\n"
+    code += script.textContent;
   }
-  return scripts[0].textContent;
+  return code;
 }
 
 function extract_id(code) {
