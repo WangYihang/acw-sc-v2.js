@@ -11,7 +11,7 @@ function setup() {
 
 function generate() {
   let data = textarea.value === "" ? textarea.placeholder : textarea.value;
-  alert("acw_sc__v2="+acw_sc__v2.acw_sc__v2(data));
+  alert("acw_sc__v2=" + acw_sc__v2.acw_sc__v2(data));
 }
 
 setup();

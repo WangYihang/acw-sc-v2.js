@@ -25,4 +25,4 @@ app.use("/", express.static(path.join(__dirname, "dist")));
 app.post("/", handle);
 
 console.log(`Web server listening on port ${port}`)
-app.listen(port, () => {});
+app.listen(port, () => { });
