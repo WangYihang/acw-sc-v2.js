@@ -12,7 +12,6 @@ app.use(express.json());
 
 function handle(req, res) {
   try {
-    console.log(req.body.data);
     cookie = acw_sc__v2.acw_sc__v2(req.body.data);
     res.send(cookie);
   } catch (error) {
