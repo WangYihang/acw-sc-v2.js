@@ -62,3 +62,9 @@ acw_sc__v2=65afac17e880921014c4ead657413970d8b23ccb
 
 * https://www.52pojie.cn/thread-1822807-1-1.html
 * https://dev-coco.github.io/Online-Tools/JavaScript-Deobfuscator.html
+
+## References
+
+* Python version for Client Code ([acw-sc-v2-py](https://github.com/WangYihang/acw-sc-v2-py))
+
+* GoLang version for client code ([acw-sc-v2-go](https://github.com/WangYihang/acw-sc-v2-go))
