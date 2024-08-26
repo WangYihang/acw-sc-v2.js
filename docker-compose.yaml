@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    build: .
+    image: ghcr.io/wangyihang/acw-sc-v2.js:main
     restart: always
     ports:
       - "3000:3000"
