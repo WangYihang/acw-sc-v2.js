@@ -20,7 +20,7 @@ function reload(x) {setCookie("acw_sc__v2", x);...
 ```bash
 git clone https://github.com/WangYihang/acw-sc-v2
 cd acw-sc-v2
-yarn install
+yarn
 ```
 
 ## API Usage
