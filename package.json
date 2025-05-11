@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "build": "parcel build src/index.html",
+    "dev": "parcel src/index.html"
   },
   "repository": {
     "type": "git",

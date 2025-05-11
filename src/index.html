@@ -7,6 +7,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-go.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -28,6 +29,37 @@
 <pre><code class="language-bash">curl https://www.example.com/ --cookie 'acw_sc__v2=65afac17e880921014c4ead657413970d8b23ccb'</code></pre>
                         </div>
                     </div>
+                    <!-- Python SDK 说明 -->
+                    <h2>Python SDK</h2>
+                    <p>
+                        To use the Python SDK, you need to install it via pip:
+                        <pre><code class="language-python">pip install acw-sc-v2-python-sdk</code></pre>
+                        Then you can use it in your Python code like this:
+                        <pre><code class="language-python">import acw_sc_v2
+cookie = acw_sc_v2.generate_cookie(html_content)</code></pre>
+                    </p>
+                    <!-- GoLang SDK 说明 -->
+                    <h2>GoLang SDK</h2>
+                    <p>
+                        To use the GoLang SDK, you need to get it with go get:
+                        <pre><code class="language-go">go get github.com/WangYihang/acw-sc-v2-go-sdk</code></pre>
+                        Then you can use it in your Go code like this:
+                        <pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "github.com/WangYihang/acw-sc-v2-go-sdk"
+)
+
+func main() {
+    cookie, err := acwscv2.GenerateCookie(htmlContent)
+    if err != nil {
+        fmt.Println("Error:", err)
+        return
+    }
+    fmt.Println("Cookie:", cookie)
+}</code></pre>
+                    </p>
                 </div>
             </div>
         </div>
